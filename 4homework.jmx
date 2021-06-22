@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1624372828000</longProp>
+        <longProp name="ThreadGroup.end_time">1624372828000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="45 /clck/click" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/reqid=1624372689.95877.85454.150761/path=690.2361/slots=317949,0,87/vars=-msg=Unhandled%20rejection%3A%20event.type%3A%20error,-env=production,-project=morda,-page=plain,-platform=desktop,-version=2021-06-18-0,-region=213,-dc=man,-host=stable-morda-man-yp-495.man.yp-c.yandex.net,-yandexuid=2587440681623851794,-referrer=https%3A%2F%2Fyandex.ru%2F,-additional=%7B%22instance%22%3A%22%22%2C%22src%22%3A%22https%3A%2F%2Fyastatic.net%2Freact%2F17.0.2%2Freact-with-dom.min.js%22%7D,-ua=Mozilla%2F5.0%20(X11%3B%20Ubuntu%3B%20Linux%20x86_64%3B%20rv%3A89.0)%20Gecko%2F20100101%20Firefox%2F89.0,-silent=no,-ts=1624372722920,-init-ts=1624372690899/cts=1624372722927/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/click</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="41 /" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="69 /clck/counter" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/dtype=clck/monitoring=1319/vars=143=2048,1042=firefox_89.0_gecko_89.0_linux__0_0_0,1964=317949/installation_info=eyJnZW8iOiJtYW4iLCJ2ZXJ0aWNhbCI6Ik1PUkRBIiwiY3R5cGUiOiJwcm9kIn0=/timefs=5924/session_id=1624372723.3214.85453.151018/events=%5B%7B%22event%22%3A%22tech%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22tech%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22localStorage%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%221%22%7D%5D%7D%5D%7D%5D%7D%2C%7B%22event%22%3A%22tech%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22tech%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22dark%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%220%22%7D%5D%7D%5D%7D%5D%7D%2C%7B%22event%22%3A%22tech%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22tech%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22promise%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%221%22%7D%5D%7D%5D%7D%5D%7D%2C%7B%22event%22%3A%22tech%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22tech%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22io%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%221%22%7D%5D%7D%5D%7D%5D%7D%2C%7B%22event%22%3A%22tech%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22tech%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22es6%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%221%22%7D%5D%7D%5D%7D%5D%7D%2C%7B%22event%22%3A%22tech%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22tech%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22loading%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%221%22%7D%5D%7D%5D%7D%5D%7D%2C%7B%22event%22%3A%22show%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22notifications%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22teaser%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22link%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%220%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22image%22%7D%2C%7B%22ctag%22%3A%22title%22%7D%5D%7D%5D%7D%5D%7D%5D%7D%2C%7B%22ctag%22%3A%22infinity_zen%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22init%22%7D%2C%7B%22ctag%22%3A%22title%22%7D%2C%7B%22ctag%22%3A%22loaded%22%7D%5D%7D%2C%7B%22ctag%22%3A%22mediafooter%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22realshow%22%7D%5D%7D%2C%7B%22ctag%22%3A%22div_news_inserts%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22title%22%7D%5D%7D%2C%7B%22ctag%22%3A%22voice%22%7D%5D%7D%2C%7B%22event%22%3A%22tech%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22mediafooter%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22initial_visibility%22%2C%22id%22%3A%22426%22%7D%5D%7D%5D%7D%5D/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/counter</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="70 /bell/api/v1/get-ticker" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/bell/api/v1/get-ticker</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="X-Requested-With" elementType="Header">
+                <stringProp name="Header.name">X-Requested-With</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="68 /suggest/suggest-ya.cgi" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="nav" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">nav</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="rich_nav" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">rich_nav</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="verified_nav" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">verified_nav</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="use_verified" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">use_verified</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="srv" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">srv</stringProp>
+                <stringProp name="Argument.value">morda_ru_desktop</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="wiz" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">wiz</stringProp>
+                <stringProp name="Argument.value">TrWth</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="uil" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">uil</stringProp>
+                <stringProp name="Argument.value">ru</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="fact" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">fact</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="v" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">v</stringProp>
+                <stringProp name="Argument.value">4</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="icon" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">icon</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="lr" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">lr</stringProp>
+                <stringProp name="Argument.value">213</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="hl" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">hl</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="bemjson" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">bemjson</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="history" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">history</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="html" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">html</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="platform" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">platform</stringProp>
+                <stringProp name="Argument.value">desktop</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="rich_nav" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">rich_nav</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="show_experiment" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">show_experiment</stringProp>
+                <stringProp name="Argument.value">222</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="show_experiment" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">show_experiment</stringProp>
+                <stringProp name="Argument.value">224</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="verified_nav" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">verified_nav</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="rich_phone" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">rich_phone</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="maybe_ads" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">maybe_ads</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="safeclick" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">safeclick</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="skip_clickdaemon_host" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">skip_clickdaemon_host</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="yu" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">yu</stringProp>
+                <stringProp name="Argument.value">2587440681623851794</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="mt_wizard" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">mt_wizard</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="svg" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">svg</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="part" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">part</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="pos" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">pos</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="suggest_reqid" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">suggest_reqid</stringProp>
+                <stringProp name="Argument.value">258744068162385179427286995319822</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="hs" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">hs</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/suggest/suggest-ya.cgi</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="72 /clck/click" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/reqid=1624372723.3214.85453.151018/path=690.2096.2877/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=628,207.2154=3396,207.1428=4574,2877=1178,2924=ru.morda.chunked_zen,2925=0,689.2322=2744,-cdn=unknown/cts=1624372727469/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.2877/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=2953,207.2154=4148,207.1428=4574,2877=426,2924=ru.morda.chunked_zen,2925=0,689.2322=2744,-cdn=unknown/cts=1624372727469/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.2877/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=1096,207.2154=4293,207.1428=4575,2877=282,2924=ru.morda.chunked_zen,2925=0,689.2322=2744,-cdn=unknown/cts=1624372727470/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.2877/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=2447,207.2154=4461,207.1428=4575,2877=114,2924=ru.morda.chunked_zen,2925=0,689.2322=2744,-cdn=unknown/cts=1624372727470/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=2616.hero_element.1928,207=1644,-cdn=unknown/cts=1624372728828/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=2876,207=1773,-cdn=unknown/cts=1624372728828/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=1604.2154,207=3705,-cdn=unknown/cts=1624372728828/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=1604.1428,207=4128,-cdn=unknown/cts=1624372728828/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=2295,207=4518,-cdn=unknown/cts=1624372728828/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=2793,207=2932,2924=ru.morda.chunked_zen,2925=0,689.2322=2744,-cdn=unknown/cts=1624372728829/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=first-paint.ssr.no_cache,207=2932,2924=ru.morda.chunked_zen,2925=0,689.2322=2744,-cdn=unknown/cts=1624372728829/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=2954,207=4878,2924=ru.morda.chunked_zen,2925=0,689.2322=2744,-cdn=unknown/cts=1624372728831/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=695.1309,207=5804,-cdn=unknown/cts=1624372728831/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.2877/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=2095,207.2154=1988,207.1428=2324,2877=336,-cdn=unknown/cts=1624372728831/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.1033/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,2129=1624372722893,1036=-104,1037=3,1038=1,1383=1,1039=48,1040=0,1040.906=79,1310.2084=1227,1310.2085=3051,1310.1309=50,1310.1007=3229,3141=6,2116=-73,2114=-74,2131=3254,2123=3204,2770=3026,2769=1202,2113=-101,2112=-104,2111=-186,2117=-73,2120=-25,2119=-25,2115=-74,1484=1,-cdn=unknown/cts=1624372728832/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=1926.2794,207=1565,-cdn=unknown/cts=1624372728833/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2361/slots=317949,0,87/vars=-msg=Unhandled%20rejection%3A%20event.type%3A%20error,-env=production,-project=morda,-page=plain,-platform=desktop,-version=2021-06-18-0,-region=213,-dc=man,-host=stable-morda-man-yp-747.man.yp-c.yandex.net,-yandexuid=2587440681623851794,-referrer=https%3A%2F%2Fyandex.ru%2F,-additional=%7B%22instance%22%3A%22%22%2C%22src%22%3A%22https%3A%2F%2Favatars.mds.yandex.net%2Fget-zen_doc%2F2804475%2F-863960401578025923%2Fsmart_crop_688x387%22%7D,-ua=Mozilla%2F5.0%20(X11%3B%20Ubuntu%3B%20Linux%20x86_64%3B%20rv%3A89.0)%20Gecko%2F20100101%20Firefox%2F89.0,-silent=no,-ts=1624372727105,-init-ts=1624372724147/cts=1624372728836/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/click</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="73 /clck/counter" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/dtype=clck/monitoring=1319/vars=143=2048,1042=firefox_89.0_gecko_89.0_linux__0_0_0,1964=317949/installation_info=eyJnZW8iOiJtYW4iLCJ2ZXJ0aWNhbCI6Ik1PUkRBIiwiY3R5cGUiOiJwcm9kIn0=/timefs=6462/session_id=1624372723.3214.85453.151018/events=%5B%7B%22event%22%3A%22notifications_height%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22login%3Dnull%2Cplus_wallet%3D46%2Ccovid%3D63%2Cdisaster%3D46%2Cfootball2021%3Dnull%2Cteaser%3D198%22%7D%5D%7D%2C%7B%22event%22%3A%22show%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22services_new%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22item%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22market%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%220%22%7D%5D%7D%2C%7B%22ctag%22%3A%22video%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%221%22%7D%5D%7D%2C%7B%22ctag%22%3A%22images%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%222%22%7D%5D%7D%2C%7B%22ctag%22%3A%22news%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%223%22%7D%5D%7D%2C%7B%22ctag%22%3A%22maps%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%224%22%7D%5D%7D%2C%7B%22ctag%22%3A%22translate%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%225%22%7D%5D%7D%2C%7B%22ctag%22%3A%22music%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%226%22%7D%5D%7D%2C%7B%22ctag%22%3A%22tv%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%227%22%7D%5D%7D%5D%7D%5D%7D%5D%7D%2C%7B%22event%22%3A%22media_services_height%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22first_screen%3D541%2Cinfinity_zen%23row0%3D477%2Cinfinity_zen%23row1%3D475%2Cdiv_news_inserts%3D369%22%7D%5D%7D%5D/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/counter</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="82 /clck/counter" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/dtype=clck/monitoring=1319/vars=143=2048,1042=firefox_89.0_gecko_89.0_linux__0_0_0,1964=317949/installation_info=eyJnZW8iOiJtYW4iLCJ2ZXJ0aWNhbCI6Ik1PUkRBIiwiY3R5cGUiOiJwcm9kIn0=/timefs=7251/session_id=1624372723.3214.85453.151018/events=%5B%7B%22event%22%3A%22tech%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22banner%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22showed%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22674099%2C674114%22%7D%5D%7D%5D%7D%5D%7D%5D/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/counter</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="84 /clck/click" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/reqid=1624372723.3214.85453.151018/path=690.2361/slots=317949,0,87/vars=-msg=Unhandled%20rejection%3A%20event.type%3A%20error,-env=production,-project=morda,-page=plain,-platform=desktop,-version=2021-06-18-0,-region=213,-dc=man,-host=stable-morda-man-yp-747.man.yp-c.yandex.net,-yandexuid=2587440681623851794,-referrer=https%3A%2F%2Fyandex.ru%2F,-additional=%7B%22instance%22%3A%22%22%2C%22src%22%3A%22https%3A%2F%2Favatars.mds.yandex.net%2Fget-zen_doc%2F4888095%2Fpub_60b13e491e59e70115e21746_60b283872174cf46a9a8fa4c%2Fsmart_crop_356x267%22%7D,-ua=Mozilla%2F5.0%20(X11%3B%20Ubuntu%3B%20Linux%20x86_64%3B%20rv%3A89.0)%20Gecko%2F20100101%20Firefox%2F89.0,-silent=no,-ts=1624372731028,-init-ts=1624372724147/cts=1624372731104/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/click</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="87 /portal/set/any/" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="sk" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">sk</stringProp>
+                <stringProp name="Argument.value">yc16ef4748e47afeb28b84bc9262a4d2c</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="empty" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">empty</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="csc" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">csc</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/portal/set/any/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="91 /clck/click" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/reqid=1624372723.3214.85453.151018/path=690.2096.277/slots=317949,0,87/vars=ft=NaN,lt=NaN,er=1,fr=0,t=tm,-cdn=unknown/cts=1624372742050/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/click</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="92 /clck/click" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/reqid=1624372723.3214.85453.151018/path=690.2354/slots=317949,0,87/vars=-stack=F%2F%2F4%2F%24.ajax%2Fn.asPromise%2F%3C%2F%3C%40https%3A%2F%2Fyastatic.net%2Fs3%2Fhome-static%2F_%2FS%2Fz%2FuGJzH9dtNwgupmQPy79DfYnxU.js%3A20%3A131767%0Athen%2F%3C%2F%3C%2F%3C%40https%3A%2F%2Fyastatic.net%2Fjquery%2F2.1.4%2Fjquery.min.js%3A2%3A28294%0Aj%40https%3A%2F%2Fyastatic.net%2Fjquery%2F2.1.4%2Fjquery.min.js%3A2%3A26925%0AfireWith%40https%3A%2F%2Fyastatic.net%2Fjquery%2F2.1.4%2Fjquery.min.js%3A2%3A27738%0Ax%40https%3A%2F%2Fyastatic.net%2Fjquery%2F2.1.4%2Fjquery.min.js%3A4%3A11278%0Aabort%40https%3A%2F%2Fyastatic.net%2Fjquery%2F2.1.4%2Fjquery.min.js%3A4%3A9111%0Aajax%2Fg%3C%40https%3A%2F%2Fyastatic.net%2Fjquery%2F2.1.4%2Fjquery.min.js%3A4%3A10672%0A,-url=https%3A%2F%2Fyastatic.net%2Fs3%2Fhome-static%2F_%2FS%2Fz%2FuGJzH9dtNwgupmQPy79DfYnxU.js,-line=20,-block=i-yabs-sender,-msg=Cannot%20load%20ajax%20request,-env=production,-project=morda,-page=plain,-platform=desktop,-version=2021-06-18-0,-region=213,-dc=man,-host=stable-morda-man-yp-747.man.yp-c.yandex.net,-yandexuid=2587440681623851794,-referrer=https%3A%2F%2Fyandex.ru%2F,-type=network,-additional=%7B%22instance%22%3A%22%22%2C%22timeout%22%3A1%2C%22url%22%3A%22yabs.yandex.ru%2Fcount%2FWDeejI_zO2S0XGO0r0bvm0ABzYiZp0K09m4ny_NHO000000useqKy0A-meRx0nAJbL6NR-WZgGUGjum46t58CAeB43U-DgwGjm00ec0elrl5G9WEagRMZFNoc_GZ-10XW14Yy18Xs1N1YlRieu-y_6FmoHRmFu4Ng1S9cHZG60_u680Pi1cu6V___m7I6H9vOM9pNtDbSdPbSYzoDJCuBJ7e6O320_0PWC833m2EEp3350mAxgfec4It40963Eoo9Oy9iOzFL4tvBamcy6W2zBDpbWzHFG9AHSKW0m00~1%3DWIOejI_zO680vGW050-LPlmCOW503aW2ODmCSCQ0WTJD8P01ZfZlgJYOk076W87K3TW1gf-M3-W1Z0AG0z2MW2MW0qYm0mAe1ge3i0U0W9Wqk0Uy2D070l470020Y07m2AF0WEhc4CdP2v2tZ0GRSKWmw0oJe0x0X3s04DMFomV840Ye4S24FTWIWO0Oc1C6g1EKuCpik_xxn1Re58G2s1N1YlRieu-y_6EW5j2_seK6WHUO5nd05xGIi1ZonyU61lWOxyRZW-wwyPrOW1cG6G6W6Qe3k1d_0UWPWC83y1c0mWE16l__judqhUiwc1hnmBG1zHe10000i1jWk1i43G0uWiPQnfH0TFp2eN6kDe2ccpObXzva2XPFlWQN9QWdDyXVOwEXv040~1%3DWOqejI_zODy07Gm0f1IU_FUMtm5014WGOCGISEpvbeUE9O012P01aDFsyJEOk07i-PQ73jW1t8-z3EW1g0AG0z2MW2Mm0yWPY0MWovW1a0MWovW1m0Mos9G1u0K5g0Qg0x07W82ODBW7xWdG1nBn1m00W870W822Y07u28kyouF74W10oTaBaBUC11jnI33e2w3Bc07e39EW3i24FTc04Ex7dWR0eX2Xg170X3tW4e6069WJ1gWJbE3CxBl--yGMu1EWovW1e1IWovW1g1IWovW1q1IIgvqGs1IWsBJd1UWKX0BG5Q3OjES5s1N1YlRieu-y_6EG5eK1e1RGlzg51iaMWHV05xGIq1VGXWFO5zoUEx0OyiV7XWRu6E_6uuFkkl6TM80P6G6W6Qe3k1d___y1w1c0mWFm6O320u4Q__yVPB0IvMYO6l70j07r6W40002m6s2u6mGH03zaS3LXlnR1Yc78qJ4SZpcloCbBLajV_RNfVN8eA4rnAie6jAX7RZk8OLFloQ90APtn6aeU~1%22%7D,-ua=Mozilla%2F5.0%20(X11%3B%20Ubuntu%3B%20Linux%20x86_64%3B%20rv%3A89.0)%20Gecko%2F20100101%20Firefox%2F89.0,-silent=no,-ts=1624372744323,-init-ts=1624372724147/cts=1624372744347/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/click</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="96 /clck/click" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/reqid=1624372723.3214.85453.151018/path=690.2096.207/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=1724,207=34245,-cdn=unknown/cts=1624372757139/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.2044/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,143.2129=1624372722893,1701=2095,2116=1222,2114=1222,2886=935435,2113=1222,2112=1222,2136=226,2887=275782,2888=resource,2111=1222,2889=link,2890=h2,2110=0,2109=0,2117=1222,2120=1448,2119=1411,2115=1222,2322=1222,2323=0,2137=0,-cdn=unknown/cts=1624372757161/*&#xd;
+/reqid=1624372723.3214.85453.151018/path=690.2096.2892/slots=317949,0,87/vars=143=28.15.899,287=213,1961=0,1964=0,1965=0,-project=morda,-page=plain,-platform=desktop,-env=production,-version=2021-06-18-0,-blocker=,-additional=%7B%7D,2116=-74,2114=-75,2886=1947576,2124=34244,2131=3254,2123=3204,2770=3026,2113=-102,2112=-104,2136=34258,2887=241478,2888=navigation,2111=-187,2889=navigation,2126=34258,2125=34244,2890=http%2F1.1,1385=0,2110=0,2109=0,2117=-73,2120=-26,2119=-26,2115=-75,2322=0,2323=246110,76=navigate,2128=0,2127=0,2137=0,-cdn=unknown/cts=1624372757162/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/click</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="101 /clck/counter" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/dtype=clck/monitoring=1319/vars=143=2048,1042=firefox_89.0_gecko_89.0_linux__0_0_0,1964=317949/installation_info=eyJnZW8iOiJtYW4iLCJ2ZXJ0aWNhbCI6Ik1PUkRBIiwiY3R5cGUiOiJwcm9kIn0=/timefs=46101/session_id=1624372723.3214.85453.151018/events=%5B%7B%22event%22%3A%22show%22%2C%22parent-path%22%3A%22v14%22%2C%22blocks%22%3A%5B%7B%22ctag%22%3A%22infinity_zen%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22row0%22%2C%22children%22%3A%5B%7B%22ctag%22%3A%22card%22%7D%5D%7D%5D%7D%5D%7D%5D/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/counter</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="102 /clck/click" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">/reqid=1624372723.3214.85453.151018/path=690.2354/slots=317949,0,87/vars=-stack=Ri%2Fthis.emitError%40https%3A%2F%2Fyastatic.net%2Fs3%2Fzen-lib%2F2.1048.0%2Fcached-render-morda-desktop%2Fapp-external-react.firefox.ru.bundle.js%3A58%3A139462%0At%2F%3C%40https%3A%2F%2Fyastatic.net%2Fs3%2Fzen-lib%2F2.1048.0%2Fcached-render-morda-desktop%2Fapp-external-react.firefox.ru.bundle.js%3A58%3A142066%0Ak%40https%3A%2F%2Fyastatic.net%2Fs3%2Fzen-lib%2F2.1048.0%2Fcached-render-morda-desktop%2Fapp-external-react.firefox.ru.bundle.js%3A20%3A21683%0Ay%2Fa._invoke%3C%2F%3C%40https%3A%2F%2Fyastatic.net%2Fs3%2Fzen-lib%2F2.1048.0%2Fcached-render-morda-desktop%2Fapp-external-react.firefox.ru.bundle.js%3A20%3A21472%0AE%2F%3C%2Fe%5Bt%5D%40https%3A%2F%2Fyastatic.net%2Fs3%2Fzen-lib%2F2.1048.0%2Fcached-render-morda-desktop%2Fapp-external-react.firefox.ru.bundle.js%3A20%3A21862%0Ar%40https%3A%2F%2Fyastatic.net%2Fs3%2Fzen-lib%2F2.1048.0%2Fcached-render-morda-desktop%2Fapp-external-react.firefox.ru.bundle.js%3A5%3A20416%0Ac%40https%3A%2F%2Fyastatic.net%2Fs3%2Fzen-lib%2F2.1048.0%2Fcached-render-morda-desktop%2Fapp-external-react.firefox.ru.bundle.js%3A5%3A20655%0A,-url=https%3A%2F%2Fyastatic.net%2Fs3%2Fzen-lib%2F2.1048.0%2Fcached-render-morda-desktop%2Fapp-external-react.firefox.ru.bundle.js,-line=58,-msg=ZenVideoPlayer%20error%3A%20Failed%20create%20player%3B%20%5Bobject%20Event%5D,-env=production,-project=zen,-service=cached-render-morda-desktop,-page=plain,-platform=desktop,-level=error,-version=2021-06-18-0,-region=213,-dc=man,-host=stable-morda-man-yp-747.man.yp-c.yandex.net,-yandexuid=2587440681623851794,-referrer=https%3A%2F%2Fyandex.ru%2F,-additional=%7B%22instance%22%3A%22%22%2C%22errorObjectRaw%22%3A%7B%22isTrusted%22%3Atrue%7D%2C%22item_id%22%3A%22-1966961630758288072%22%2C%22stream_block%22%3A%22export%3Afeed%22%2C%22videoContentId%22%3A%22vOI5dcxsenyg%22%2C%22sandboxVersion%22%3A%220xf7d208230c7%22%7D,-ua=Mozilla%2F5.0%20(X11%3B%20Ubuntu%3B%20Linux%20x86_64%3B%20rv%3A89.0)%20Gecko%2F20100101%20Firefox%2F89.0,-silent=no,-ts=1624372769179,-init-ts=1624372724147/cts=1624372769259/*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">yandex.ru</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/clck/click</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://yandex.ru/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://yandex.ru</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
+          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="influxdbMetricsSender" elementType="Argument">
+                <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
+                <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="influxdbUrl" elementType="Argument">
+                <stringProp name="Argument.name">influxdbUrl</stringProp>
+                <stringProp name="Argument.value">http://0.0.0.0:8086/write?db=jmeter</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="application" elementType="Argument">
+                <stringProp name="Argument.name">application</stringProp>
+                <stringProp name="Argument.value">application name</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="measurement" elementType="Argument">
+                <stringProp name="Argument.name">measurement</stringProp>
+                <stringProp name="Argument.value">jmeter</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="summaryOnly" elementType="Argument">
+                <stringProp name="Argument.name">summaryOnly</stringProp>
+                <stringProp name="Argument.value">false</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="samplersRegex" elementType="Argument">
+                <stringProp name="Argument.name">samplersRegex</stringProp>
+                <stringProp name="Argument.value">.*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="percentiles" elementType="Argument">
+                <stringProp name="Argument.name">percentiles</stringProp>
+                <stringProp name="Argument.value">99;95;90</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="testTitle" elementType="Argument">
+                <stringProp name="Argument.name">testTitle</stringProp>
+                <stringProp name="Argument.value">Test name</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="eventTags" elementType="Argument">
+                <stringProp name="Argument.name">eventTags</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
+        </BackendListener>
+        <hashTree/>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
+          <intProp name="calcMode">0</intProp>
+          <doubleProp>
+            <name>throughput</name>
+            <value>60.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+        </ConstantThroughputTimer>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
