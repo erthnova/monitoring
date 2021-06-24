@@ -6,7 +6,9 @@ services:
       - '8086:8086'
       - '2003:2003'
     volumes:
-      - ./influxdb-storage/:/etc/influxdb/other
+      - ./influxdb/lib/:/var/lib/influxdb
+      - ./influxdb/conf/:/etc/influxdb/
+      
     environment:
       - INFLUXDB_DB=jmeter
       - INFLUXDB_ADMIN_USER=${INFLUXDB_USERNAME}
@@ -16,7 +18,9 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - ./grafana-provisioning/:/etc/grafana/provisioning
+    - grafana_data:/var/lib/grafana
+    - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+    - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
     depends_on:
       - influxdb
     links:
@@ -24,3 +28,8 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=${GRAFANA_USERNAME}
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+      
+volumes:
+  grafana_data:
+  influxdb-storage:
+    external: true
